@@ -1,3 +1,8 @@
 @import 'variables';
+@import '~font-awesome/scss/font-awesome';
 @import 'base';
+@import 'view-transition';
 @import 'slides/intro';
+@import 'slides/about';
+@import 'slides/definition';
+@import 'slides/advantages';

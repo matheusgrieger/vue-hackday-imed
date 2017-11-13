@@ -1,0 +1,27 @@
+.view-enter-active,
+.view-leave-active {
+  transition: all 500ms;
+}
+
+.view-enter-active {
+  transition-timing-function: ease-out;
+}
+
+.view-leave-active {
+  transition-timing-function: ease-in;
+}
+
+.view-enter {
+  transform: translateX(100%) scale(0.8);
+}
+
+.view-leave,
+.view-enter,
+.view-leave-to {
+  box-shadow: 0 10px 50px rgba(#000, 0.8);
+}
+
+.view-leave-to {
+  transform: scale(0.7);
+  opacity: 0;
+}

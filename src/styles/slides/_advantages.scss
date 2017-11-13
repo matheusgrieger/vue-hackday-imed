@@ -1,0 +1,17 @@
+.advantages {
+  display: flex;
+  flex-direction: row;
+
+  .left,
+  .right {
+    width: 50%;
+  }
+
+  ul {
+    font-size: 18px;
+
+    li {
+      margin-bottom: 20px;
+    }
+  }
+}

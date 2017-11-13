@@ -1,0 +1,17 @@
+.definition {
+  .lists {
+    margin-top: 100px;
+    display: flex;
+    flex-flow: row;
+    font-size: 20px;
+
+    .vue,
+    .angular {
+      width: 50%;
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+}
