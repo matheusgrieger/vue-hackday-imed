@@ -4,7 +4,9 @@ import Intro from '@/components/Intro'
 import About from '@/components/About'
 import History from '@/components/History'
 import Definition from '@/components/Definition'
+import Sizes from '@/components/Sizes'
 import Advantages from '@/components/Advantages'
+import SampleApp from '@/components/SampleApp'
 
 Vue.use(Router)
 
@@ -42,8 +44,17 @@ export default new Router({
       name: 'Definition',
       component: Definition,
       meta: {
-        nextSlide: 'Advantages',
+        nextSlide: 'Sizes',
         prevSlide: 'History'
+      }
+    },
+    {
+      path: '/sizes',
+      name: 'Sizes',
+      component: Sizes,
+      meta: {
+        nextSlide: 'Advantages',
+        prevSlide: 'Definition'
       }
     },
     {
@@ -51,8 +62,17 @@ export default new Router({
       name: 'Advantages',
       component: Advantages,
       meta: {
+        nextSlide: 'SampleApp',
+        prevSlide: 'Sizes'
+      }
+    },
+    {
+      path: '/sample-app',
+      name: 'SampleApp',
+      component: SampleApp,
+      meta: {
         nextSlide: null,
-        prevSlide: 'Definition'
+        prevSlide: 'Advantages'
       }
     }
   ]

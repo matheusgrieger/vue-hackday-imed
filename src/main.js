@@ -3,10 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueHighlightJS from 'vue-highlightjs'
 
 import './styles/main.scss'
 
 Vue.config.productionTip = false
+
+Vue.use(VueHighlightJS)
 
 /* eslint-disable no-new */
 new Vue({

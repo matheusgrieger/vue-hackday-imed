@@ -10,10 +10,6 @@
           <li>Construir Interfaces</li>
           <li>Templates</li>
           <li>Framework ou Biblioteca</li>
-          <li v-if="state > 2">
-            <strong>30kb</strong> <br>
-            Vue + Vue Router + Vuex
-          </li>
         </ul>
       </div>
       <div class="angular" v-if="state > 1">
@@ -24,10 +20,6 @@
           <li>Construir Interfaces</li>
           <li>Templates</li>
           <li>Framework ou Biblioteca</li>
-          <li v-if="state > 2">
-            <strong class="bad">144kb</strong> (AngularJS) <br>
-            <strong class="bad">130kb</strong> (Angular 2+)
-          </li>
         </ul>
       </div>
     </div>
@@ -35,30 +27,12 @@
 </template>
 
 <script>
+import arrowDownState from '../mixins/arrowDownState'
+
 export default {
   name: 'Definition',
 
-  data () {
-    return {
-      state: 1
-    }
-  },
-
-  methods: {
-    nextState (event) {
-      if (event.keyCode === 40) {
-        this.state++
-      }
-    }
-  },
-
-  created () {
-    window.addEventListener('keydown', this.nextState)
-  },
-
-  beforeDestroy () {
-    window.removeEventListener('keydown', this.nextState)
-  }
+  mixins: [arrowDownState]
 }
 </script>
 

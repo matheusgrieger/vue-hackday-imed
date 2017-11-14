@@ -1,0 +1,24 @@
+.app-demo {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  input {
+    border: 1px solid #aaa;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    display: block;
+    font-size: 18px;
+
+    &:hover {
+      border-color: #bbb;
+    }
+
+    &:focus {
+      border-color: $green;
+      outline: none;
+    }
+  }
+}
