@@ -17,7 +17,7 @@
         </li>
         <li>
           <strong>Modularizado</strong> <br>
-          Funciona 100% em torno de componentes
+          Funciona 100% com componentes
         </li>
         <li>
           <strong>JavaScript</strong> <br>

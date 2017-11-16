@@ -7,6 +7,8 @@ import Definition from '@/components/Definition'
 import Sizes from '@/components/Sizes'
 import Advantages from '@/components/Advantages'
 import SampleApp from '@/components/SampleApp'
+import SampleComponent from '@/components/SampleComponent'
+import SampleVueComponent from '@/components/SampleVueComponent'
 
 Vue.use(Router)
 
@@ -71,8 +73,26 @@ export default new Router({
       name: 'SampleApp',
       component: SampleApp,
       meta: {
-        nextSlide: null,
+        nextSlide: 'SampleComponent',
         prevSlide: 'Advantages'
+      }
+    },
+    {
+      path: '/sample-component',
+      name: 'SampleComponent',
+      component: SampleComponent,
+      meta: {
+        nextSlide: 'SampleVueComponent',
+        prevSlide: 'SampleApp'
+      }
+    },
+    {
+      path: '/sample-vue-component',
+      name: 'SampleVueComponent',
+      component: SampleVueComponent,
+      meta: {
+        nextSlide: null,
+        prevSlide: 'SampleComponent'
       }
     }
   ]
