@@ -5,13 +5,15 @@
       <input type="text" v-model="msg">
       Você digitou: {{ msg }}
     </div>
-    <pre v-highlightjs="sourceCode" class="code">
+    <pre v-highlightjs="sourceCode" class="code" v-if="state > 1">
       <code class="html"></code>
     </pre>
   </div>
 </template>
 
 <script>
+import arrowDownState from '../mixins/arrowDownState'
+
 export default {
   name: 'SampleApp',
 
@@ -32,7 +34,9 @@ export default {
 <\/script>`,
       msg: 'Welcome Hackday!'
     }
-  }
+  },
+
+  mixins: [arrowDownState]
 }
 </script>
 
