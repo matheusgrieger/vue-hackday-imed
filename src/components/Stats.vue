@@ -8,7 +8,7 @@
       </li>
       <li v-if="state > 1">
         <strong>96%</strong> dos desenvolvedores usaria novamente, contra 89% de 2016<br>
-        Fonte: <em>State of Vue.js by Monterail</em>
+        Fonte: <em>State of Vue.js by Monterail</em> <br>
         Fonte: <em>State of JavaScript 2016</em>
       </li>
       <li v-if="state > 2">

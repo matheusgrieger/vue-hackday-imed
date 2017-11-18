@@ -10,7 +10,7 @@ export default {
 
   methods: {
     click () {
-      this.$emit('input', this.value + 1)
+      this.$emit('input', Number(this.value) + 1)
     }
   }
 }

@@ -11,6 +11,9 @@ import Sizes from '@/components/Sizes'
 import SampleApp from '@/components/SampleApp'
 import SampleComponent from '@/components/SampleComponent'
 import SampleVueComponent from '@/components/SampleVueComponent'
+import ExtraFeatures from '@/components/ExtraFeatures'
+import OfficialResources from '@/components/OfficialResources'
+import End from '@/components/End'
 
 Vue.use(Router)
 
@@ -39,17 +42,8 @@ export default new Router({
       name: 'History',
       component: History,
       meta: {
-        nextSlide: 'Definition',
-        prevSlide: 'About'
-      }
-    },
-    {
-      path: '/definition',
-      name: 'Definition',
-      component: Definition,
-      meta: {
         nextSlide: 'Stats',
-        prevSlide: 'History'
+        prevSlide: 'About'
       }
     },
     {
@@ -57,8 +51,17 @@ export default new Router({
       name: 'Stats',
       component: Stats,
       meta: {
+        nextSlide: 'Definition',
+        prevSlide: 'History'
+      }
+    },
+    {
+      path: '/definition',
+      name: 'Definition',
+      component: Definition,
+      meta: {
         nextSlide: 'Advantages',
-        prevSlide: 'Definition'
+        prevSlide: 'Stats'
       }
     },
     {
@@ -67,7 +70,7 @@ export default new Router({
       component: Advantages,
       meta: {
         nextSlide: 'Sizes',
-        prevSlide: 'Stats'
+        prevSlide: 'Definition'
       }
     },
     {
@@ -102,8 +105,35 @@ export default new Router({
       name: 'SampleVueComponent',
       component: SampleVueComponent,
       meta: {
-        nextSlide: null,
+        nextSlide: 'ExtraFeatures',
         prevSlide: 'SampleComponent'
+      }
+    },
+    {
+      path: '/extra-features',
+      name: 'ExtraFeatures',
+      component: ExtraFeatures,
+      meta: {
+        nextSlide: 'OfficialResources',
+        prevSlide: 'SampleVueComponent'
+      }
+    },
+    {
+      path: '/official-resources',
+      name: 'OfficialResources',
+      component: OfficialResources,
+      meta: {
+        nextSlide: 'End',
+        prevSlide: 'ExtraFeatures'
+      }
+    },
+    {
+      path: '/end',
+      name: 'End',
+      component: End,
+      meta: {
+        nextSlide: null,
+        prevSlide: 'OfficialResources'
       }
     }
   ]
