@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Intro from '@/components/Intro'
 import About from '@/components/About'
 import History from '@/components/History'
 import Definition from '@/components/Definition'
-import Sizes from '@/components/Sizes'
+import Stats from '@/components/Stats'
 import Advantages from '@/components/Advantages'
+import Sizes from '@/components/Sizes'
 import SampleApp from '@/components/SampleApp'
 import SampleComponent from '@/components/SampleComponent'
 import SampleVueComponent from '@/components/SampleVueComponent'
@@ -46,14 +48,14 @@ export default new Router({
       name: 'Definition',
       component: Definition,
       meta: {
-        nextSlide: 'Sizes',
+        nextSlide: 'Stats',
         prevSlide: 'History'
       }
     },
     {
-      path: '/sizes',
-      name: 'Sizes',
-      component: Sizes,
+      path: '/stats',
+      name: 'Stats',
+      component: Stats,
       meta: {
         nextSlide: 'Advantages',
         prevSlide: 'Definition'
@@ -64,8 +66,17 @@ export default new Router({
       name: 'Advantages',
       component: Advantages,
       meta: {
+        nextSlide: 'Sizes',
+        prevSlide: 'Stats'
+      }
+    },
+    {
+      path: '/sizes',
+      name: 'Sizes',
+      component: Sizes,
+      meta: {
         nextSlide: 'SampleApp',
-        prevSlide: 'Sizes'
+        prevSlide: 'Advantages'
       }
     },
     {
@@ -74,7 +85,7 @@ export default new Router({
       component: SampleApp,
       meta: {
         nextSlide: 'SampleComponent',
-        prevSlide: 'Advantages'
+        prevSlide: 'Sizes'
       }
     },
     {

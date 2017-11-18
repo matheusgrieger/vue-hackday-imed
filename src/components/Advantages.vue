@@ -27,6 +27,10 @@
           <strong>Documentação</strong> <br>
           Completa, clara e traduzida
         </li>
+        <li>
+          <strong>Compatibilidade</strong> <br>
+          Use o que quiser, como quiser
+        </li>
       </ul>
     </div>
     <div class="right" v-if="state > 1">
